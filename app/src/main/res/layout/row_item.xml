@@ -12,7 +12,7 @@
         android:id="@+id/image_view"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:background="@android:color/white" />
+         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

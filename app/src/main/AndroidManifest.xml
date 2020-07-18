@@ -9,20 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".alphabets2screen">
-
-
-
-        </activity>
-        <activity android:name=".secondscreen">
+        <activity android:name=".subMainAdapter"></activity>
+        <activity android:name=".number2" />
+        <activity android:name=".eachAlphabet3" />
+        <activity android:name=".family2" />
+        <activity android:name=".alphabets2screen" />
+        <activity android:name=".secondscreen" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

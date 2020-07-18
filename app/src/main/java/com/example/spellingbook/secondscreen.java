@@ -3,6 +3,7 @@ package com.example.spellingbook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -27,7 +28,7 @@ public class secondscreen extends AppCompatActivity {
             R.drawable.flower,
             R.drawable.color,
             R.drawable.mathss,
-            R.drawable.hexagon, R.drawable.vechicle};
+            R.drawable.triangle, R.drawable.vechicle};
 
 
 
@@ -49,6 +50,19 @@ public class secondscreen extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getApplicationContext(),"You Clicked"+numberword[+position],
                         Toast.LENGTH_SHORT).show();
+                if (position==0){
+                    startActivity(new Intent(secondscreen.this,alphabets2screen.class));
+                }
+                if (position==1){
+                    startActivity(new Intent(secondscreen.this,number2.class));
+                }
+                if (position==2){
+                    startActivity(new Intent(secondscreen.this,family2.class));
+                }
+                if (position==0){
+                    startActivity(new Intent(secondscreen.this,alphabets2screen.class));
+                }
+
             }
         });
 

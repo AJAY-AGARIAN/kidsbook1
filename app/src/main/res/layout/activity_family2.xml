@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/background_light"
-    tools:context=".alphabets2screen">
+    android:backgroundTint="#FFFDFD"
+    tools:context=".family2">
 
     <GridView
+        android:id="@+id/gridview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/gridview"
-        android:numColumns="2"/>
+        android:numColumns="2" />
 
 </LinearLayout>

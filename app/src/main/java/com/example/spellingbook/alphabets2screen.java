@@ -1,9 +1,9 @@
-
 package com.example.spellingbook;
 
 
         import androidx.appcompat.app.AppCompatActivity;
 
+        import android.content.Intent;
         import android.os.Bundle;
         import android.view.View;
         import android.widget.AdapterView;
@@ -12,9 +12,9 @@ package com.example.spellingbook;
 
 public class alphabets2screen extends AppCompatActivity {
     GridView grill;
-    String[] numberword={"","",""," ","","","","","","","","","","","","","","","","",
-            "","","","","",""};
-    int[] numberimage={
+    public static String[] eachWord={"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t",
+            "u","v","w","x","y","z"};
+   public static int[] wordImage={
             R.drawable.a,
             R.drawable.b,
             R.drawable.c,
@@ -52,7 +52,7 @@ public class alphabets2screen extends AppCompatActivity {
         setContentView(R.layout.activity_alphabets2screen);
 
         grill=findViewById(R.id.gridview);
-        mainAdapter adapter= new mainAdapter(alphabets2screen.this,numberword,numberimage);
+        mainAdapter adapter= new mainAdapter(alphabets2screen.this,eachWord,wordImage);
         grill.setAdapter(adapter);
 
 
@@ -60,8 +60,11 @@ public class alphabets2screen extends AppCompatActivity {
         grill.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(),"You Clicked"+numberword[+position],
+                Toast.makeText(getApplicationContext(),"You Clicked"+eachWord[+position],
                         Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(alphabets2screen.this,eachAlphabet3.class);
+                intent.putExtra("position",position+"");
+                startActivity(intent);
             }
         });
 
