@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private static int SPLASH_SCreen=4000;
+    private static int SPLASH_SCreen=1000;
     Animation topanim,bottomanim;
     ImageView image;
     TextView text;

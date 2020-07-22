@@ -12,8 +12,8 @@ package com.example.spellingbook;
 
 public class alphabets2screen extends AppCompatActivity {
     GridView grill;
-    public static String[] eachWord={"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t",
-            "u","v","w","x","y","z"};
+    public static String[] eachWord={"","","","","","","","","","","","","","","","","","","","",
+            "","","","","",""};
    public static int[] wordImage={
             R.drawable.a,
             R.drawable.b,
