@@ -10,9 +10,9 @@
 
     <TextView
         android:id="@+id/textview"
-        android:layout_width="427dp"
-        android:layout_height="286dp"
-        android:fontFamily="serif"
+        android:layout_width="417dp"
+        android:layout_height="295dp"
+        android:fontFamily="@font/great_vibes"
         android:text="Kids Picture Book"
         android:textAlignment="center"
         android:textColor="#302D2D"

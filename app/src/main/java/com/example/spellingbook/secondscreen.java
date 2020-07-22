@@ -81,6 +81,9 @@ public class secondscreen extends AppCompatActivity {
                 if (position==10){
                     startActivity(new Intent(secondscreen.this,flowers2.class));
                 }
+                if (position==11){
+                    startActivity(new Intent(secondscreen.this,colour2.class));
+                }
                 if (position==12){
                     startActivity(new Intent(secondscreen.this,maths2.class));
                 }
