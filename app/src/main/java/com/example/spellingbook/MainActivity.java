@@ -1,8 +1,5 @@
 package com.example.spellingbook;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,9 +9,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
-    private static int SPLASH_SCreen=4000;
-    Animation topanim,bottomanim;
+    private static int SPLASH_SCreen = 3000;
+    Animation topanim, bottomanim;
     ImageView image;
     TextView text;
 
