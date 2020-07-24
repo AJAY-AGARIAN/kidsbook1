@@ -48,8 +48,8 @@ public class wildAdapter extends BaseAdapter {
         }
 
 
-        ImageView imageView = convertView.findViewById(R.id.image_view6);
-        TextView text = convertView.findViewById(R.id.text_view6);
+        ImageView imageView = convertView.findViewById(R.id.image_view);
+        TextView text = convertView.findViewById(R.id.text_view);
         imageView.setImageResource(numberimage[position]);
         text.setText(numberword[position]);
         return convertView;
