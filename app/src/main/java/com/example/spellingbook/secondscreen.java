@@ -1,13 +1,23 @@
 package com.example.spellingbook;
 
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.Locale;
+
+import static com.example.spellingbook.eachAlphabet3.t1;
 
 public class secondscreen extends AppCompatActivity {
     GridView grill;
@@ -36,7 +46,14 @@ public class secondscreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_secondscreen);
-
+        t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status != TextToSpeech.ERROR) {
+                    t1.setLanguage(Locale.US);
+                }
+            }
+        });
         grill=findViewById(R.id.gridview);
         mainAdapter adapter= new mainAdapter(secondscreen.this,numberword,numberimage);
         grill.setAdapter(adapter);
@@ -48,8 +65,10 @@ public class secondscreen extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getApplicationContext(),"You Clicked"+numberword[+position],
                         Toast.LENGTH_SHORT).show();
+                t1.speak(numberword[position], TextToSpeech.QUEUE_FLUSH, null);
                 if (position==0){
                     startActivity(new Intent(secondscreen.this,alphabets2screen.class));
+
                 }
                 if (position==1){
                     startActivity(new Intent(secondscreen.this,number2.class));
@@ -95,6 +114,56 @@ public class secondscreen extends AppCompatActivity {
                 }
 
 
+            }
+        });
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(secondscreen.this);
+                LayoutInflater layoutInflaterAndroid = LayoutInflater.from(secondscreen.this);
+                View view2 = layoutInflaterAndroid.inflate(R.layout.alert_box, null);
+                builder.setView(view2);
+                builder.setCancelable(false);
+                final AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+                ImageButton rate = view2.findViewById(R.id.imageButton);
+                ImageButton share= view2.findViewById(R.id.imageButton2);
+                ImageButton aboutUs = view2.findViewById(R.id.imageButton3);
+                ImageButton contactUs = view2.findViewById(R.id.imageButton4);
+                ImageButton exit = view2.findViewById(R.id.imageButton5);
+
+
+                exit.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        alertDialog.cancel();
+                    }
+                });
+                rate.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(secondscreen.this, "Rate us ...", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                aboutUs.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(secondscreen.this, "Rate us ...", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                share.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(secondscreen.this, "Rate us ...", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                contactUs.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(secondscreen.this, "Rate us ...", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
 
