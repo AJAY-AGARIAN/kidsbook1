@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".attributes">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:fontFamily="serif"
+                android:text="Attribution"
+                android:textColor="#C61414"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:autoLink="all"
+                android:clickable="true"
+                android:padding="10dp"
+                android:text="<a href='https://www.freepik.com/free-photos-vectors/people'>People vector created by freepik - www.freepik.com</a>" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:autoLink="all"
+                android:clickable="true"
+                android:text="<a href='https://www.freepik.com/free-photos-vectors/design'>Design vector created by user2104819 - www.freepik.com</a>" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:autoLink="all"
+                android:clickable="true"
+                android:text="<a href='https://www.freepik.com/free-photos-vectors/background'>Background vector created by cornecoba - www.freepik.com</a>" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:autoLink="all"
+                android:clickable="true"
+                android:text="<a href='https://www.freepik.com/free-photos-vectors/food'>Food vector created by freepik - www.freepik.com</a>" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
