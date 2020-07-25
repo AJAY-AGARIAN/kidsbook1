@@ -12,12 +12,12 @@
         android:id="@+id/image_view"
         android:layout_width="150dp"
         android:layout_height="150dp"
-         />
+        android:contentDescription="@string/todo" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/text_view"
-        android:text="number"
+        android:text="@string/number"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginVertical="20dp"

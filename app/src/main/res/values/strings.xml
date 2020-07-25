@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Kids Picture Book:Spelling Learner</string>
+    <string name="number">number</string>
+    <string name="todo">TODO</string>
 </resources>
