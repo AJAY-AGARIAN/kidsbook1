@@ -1,10 +1,12 @@
 package com.example.spellingbook;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -16,6 +18,7 @@ import static com.example.spellingbook.eachAlphabet3.t1;
 
 public class colour2 extends AppCompatActivity {
     GridView grill;
+    Button btncolor;
     String[] numberword = {"Red", "Green", "Blue", "Yellow", "Purple", "Brown", "Orange", "Pink", "Grey", "White", "Gold",
             "Silver"};
     int[] numberimage = {
@@ -46,6 +49,13 @@ public class colour2 extends AppCompatActivity {
                 }
             }
         });
+        btncolor = findViewById(R.id.back_button_color);
+        btncolor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         grill = findViewById(R.id.gridview11);
         mainAdapter adapter = new mainAdapter(colour2.this, numberword, numberimage);
@@ -60,5 +70,14 @@ public class colour2 extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(Intent.ACTION_MAIN);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        finish();
     }
 }

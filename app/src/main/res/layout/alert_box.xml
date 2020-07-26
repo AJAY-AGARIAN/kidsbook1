@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="80dp"
     android:layout_marginStart="15dp"
@@ -36,16 +37,8 @@
             android:layout_weight="1"
             android:background="@drawable/round_oval"
             android:tooltipText="hai"
-            app:srcCompat="@drawable/ic_baseline_share_24" />
-
-        <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="30dp"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/round_oval"
-            app:srcCompat="@drawable/people" />
+            app:srcCompat="@drawable/ic_baseline_share_24"
+            tools:ignore="VectorDrawableCompat" />
 
         <ImageButton
             android:id="@+id/imageButton4"
@@ -54,19 +47,10 @@
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:background="@drawable/round_oval"
-            app:srcCompat="@drawable/ic_baseline_perm_phone_msg_24" />
-
-        <ImageButton
-            android:id="@+id/imageButton5"
-            android:layout_width="30dp"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/round_oval"
             app:srcCompat="@drawable/about" />
 
         <ImageButton
-            android:id="@+id/imageButton6"
+            android:id="@+id/imageButton5"
             android:layout_width="30dp"
             android:layout_height="50dp"
             android:layout_margin="5dp"

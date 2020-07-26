@@ -1,8 +1,6 @@
 package com.example.spellingbook;
 
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
@@ -12,6 +10,9 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -128,9 +129,8 @@ public class secondscreen extends AppCompatActivity {
                 final AlertDialog alertDialog = builder.create();
                 alertDialog.show();
                 ImageButton rate = view2.findViewById(R.id.imageButton);
-                ImageButton share= view2.findViewById(R.id.imageButton2);
-                ImageButton aboutUs = view2.findViewById(R.id.imageButton3);
-                ImageButton contactUs = view2.findViewById(R.id.imageButton4);
+                ImageButton share = view2.findViewById(R.id.imageButton2);
+                ImageButton aboutUs = view2.findViewById(R.id.imageButton4);
                 ImageButton exit = view2.findViewById(R.id.imageButton5);
 
 
@@ -149,7 +149,7 @@ public class secondscreen extends AppCompatActivity {
                 aboutUs.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(secondscreen.this, "Rate us ...", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(secondscreen.this, about.class));
                     }
                 });
                 share.setOnClickListener(new View.OnClickListener() {
@@ -158,12 +158,7 @@ public class secondscreen extends AppCompatActivity {
                         Toast.makeText(secondscreen.this, "Rate us ...", Toast.LENGTH_SHORT).show();
                     }
                 });
-                contactUs.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(secondscreen.this, "Rate us ...", Toast.LENGTH_SHORT).show();
-                    }
-                });
+
             }
         });
 

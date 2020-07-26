@@ -7,6 +7,34 @@
     android:background="@android:color/white"
     tools:context=".eachAlphabet3">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ccc"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/back_button1"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/backk"
+            android:gravity="start" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="-30dp"
+            android:text="Alphabets"
+            android:textSize="25sp"
+            android:textStyle="italic|bold" />
+    </LinearLayout>
+
+
     <TextView
         android:id="@+id/txt_alpha"
         android:layout_width="88dp"
@@ -20,17 +48,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157" />
+        app:layout_constraintVertical_bias="0.226" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginEnd="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.124"
+        app:layout_constraintVertical_bias="0.186"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -46,18 +74,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.023" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.898"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

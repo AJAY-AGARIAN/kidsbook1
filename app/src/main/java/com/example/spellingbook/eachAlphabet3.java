@@ -4,17 +4,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import java.util.Locale;
 
 public class eachAlphabet3 extends AppCompatActivity {
     public static TextToSpeech t1;
+    Button btnalpha;
     public static String[] eachWord = {"a for Apple", "b for Boll", "c for Cat", "d for Dog", "e for Elephant", " f for Fish", "g for Grapes", "h for Horse",
             "i for Ice Cream", "j for Jeep", "k for Kite", "l for Lion", "m for Mango", "n for Nest", "o for Orange", "p for Parrot", "q for Queen", "r for Rabbit", "s for Snake", "t for Train",
             "u for Umbrella", "v for Van", "w for Watch", "x for Xylophone", "y for Yak", "z for Zebra"};
@@ -77,8 +77,9 @@ public class eachAlphabet3 extends AppCompatActivity {
         final String stEachWordSpeech = eachWordSpeech[st];
         imgView.setImageResource(image[st]);
         txtPlay.setText(eachWordSpeech[st].substring(6));
-        FloatingActionButton fab = findViewById(R.id.floatingActionButton);
-        fab.setOnClickListener(new View.OnClickListener() {
+
+        btnalpha = findViewById(R.id.back_button1);
+        btnalpha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();

@@ -1,9 +1,11 @@
 package com.example.spellingbook;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -13,6 +15,7 @@ import java.util.Locale;
 
 public class number2 extends AppCompatActivity {
     public static TextToSpeech t1;
+    Button btnnumber;
     GridView grill;
     String[] numberword = {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen",
             "Nineteen", "Twenty", "Twenty-one", "Twenty-two", "Twenty-three", "Twenty-four", "Twenty-five", "Twenty-six", "Twenty-seven", "Twenty-eight", "Twenty-nine", "Thirty",
@@ -57,6 +60,22 @@ public class number2 extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             }
         });
+        btnnumber = findViewById(R.id.back_button_number);
+        btnnumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(Intent.ACTION_MAIN);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        finish();
     }
 }

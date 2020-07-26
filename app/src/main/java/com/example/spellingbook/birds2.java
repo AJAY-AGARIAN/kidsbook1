@@ -1,10 +1,12 @@
 package com.example.spellingbook;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -16,6 +18,7 @@ import static com.example.spellingbook.eachAlphabet3.t1;
 
 public class birds2 extends AppCompatActivity {
     GridView grill;
+    Button backbuttion;
     String[] numberword = {"Peacock", "Parrot", "Duck", "Hen", "Owl", "Pigeon", "Swan", "Toucan", "Sparrow", "Vulture", "Eagle", "Hornbill", "Pheasant"};
     int[] numberimage = {
             R.drawable.peacock,
@@ -45,6 +48,13 @@ public class birds2 extends AppCompatActivity {
                 }
             }
         });
+        backbuttion = findViewById(R.id.back_button);
+        backbuttion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         grill = findViewById(R.id.gridview8);
         mainAdapter adapter = new mainAdapter(birds2.this, numberword, numberimage);
@@ -59,5 +69,14 @@ public class birds2 extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(Intent.ACTION_MAIN);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        finish();
     }
 }

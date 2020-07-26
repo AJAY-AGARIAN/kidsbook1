@@ -1,24 +1,26 @@
 package com.example.spellingbook;
 
 
-        import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.GridView;
+import android.widget.Toast;
 
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.speech.tts.TextToSpeech;
-        import android.view.View;
-        import android.widget.AdapterView;
-        import android.widget.GridView;
-        import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
 
-        import java.util.Locale;
+import java.util.Locale;
 
-        import static com.example.spellingbook.eachAlphabet3.t1;
+import static com.example.spellingbook.eachAlphabet3.t1;
 
 public class alphabets2screen extends AppCompatActivity {
     GridView grill;
-    public static String[] eachWord={"","","","","","","","","","","","","","","","","","","","",
-            "","","","","",""};
+    Button btnalpah2;
+    public static String[] eachWord = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+            "", "", "", "", "", ""};
     public static String[] eachWord2={"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T",
             "U","V","W","X","Y","Z"};
    public static int[] wordImage={
@@ -57,31 +59,47 @@ public class alphabets2screen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alphabets2screen);
-        t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+        t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
-                if(status != TextToSpeech.ERROR) {
+                if (status != TextToSpeech.ERROR) {
                     t1.setLanguage(Locale.US);
                 }
             }
         });
-        grill=findViewById(R.id.gridview);
-        mainAdapter adapter= new mainAdapter(alphabets2screen.this,eachWord,wordImage);
+        btnalpah2 = findViewById(R.id.back_button2);
+        btnalpah2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+        grill = findViewById(R.id.gridview);
+        mainAdapter adapter = new mainAdapter(alphabets2screen.this, eachWord, wordImage);
         grill.setAdapter(adapter);
-
 
 
         grill.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 t1.speak(eachWord2[position], TextToSpeech.QUEUE_FLUSH, null);
-                Toast.makeText(getApplicationContext(),"You Clicked"+eachWord[+position],
+                Toast.makeText(getApplicationContext(), "You Clicked" + eachWord[+position],
                         Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(alphabets2screen.this,eachAlphabet3.class);
-                intent.putExtra("position",position+"");
+                Intent intent = new Intent(alphabets2screen.this, eachAlphabet3.class);
+                intent.putExtra("position", position + "");
                 startActivity(intent);
             }
         });
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(Intent.ACTION_MAIN);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        finish();
+    }
+
 }

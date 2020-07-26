@@ -1,10 +1,12 @@
 package com.example.spellingbook;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -16,6 +18,7 @@ import static com.example.spellingbook.eachAlphabet3.t1;
 
 public class maths2 extends AppCompatActivity {
     GridView grill;
+    Button btnmaths;
     String[] numberword = {"Plus", "Minus", "Multiply", "Division", "Equal", "Less-Than", "Greater- Than", "Not-Equal"};
     int[] numberimage = {
             R.drawable.plus,
@@ -41,6 +44,13 @@ public class maths2 extends AppCompatActivity {
                 }
             }
         });
+        btnmaths = findViewById(R.id.back_button_maths);
+        btnmaths.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         grill = findViewById(R.id.gridview12);
         mainAdapter adapter = new mainAdapter(maths2.this, numberword, numberimage);
@@ -55,5 +65,14 @@ public class maths2 extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(Intent.ACTION_MAIN);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        finish();
     }
 }

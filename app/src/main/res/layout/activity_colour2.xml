@@ -4,13 +4,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/background_light"
-    android:backgroundTint="#FFFDFD"
-    tools:context=".insects2">
+    android:backgroundTint="#FAF8F8"
+    android:orientation="vertical"
+    tools:context=".colour2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ccc"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/back_button_color"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/backk"
+            android:gravity="start" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="-30dp"
+            android:text="Colors"
+            android:textSize="25sp"
+            android:textStyle="italic|bold" />
+
+    </LinearLayout>
 
     <GridView
         android:id="@+id/gridview11"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/white"
         android:numColumns="3" />
 
 </LinearLayout>

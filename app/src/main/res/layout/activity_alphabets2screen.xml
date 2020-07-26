@@ -1,16 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/background_light"
+    android:backgroundTint="#FAF8F8"
+    android:orientation="vertical"
     tools:context=".alphabets2screen">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ccc"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/back_button2"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/backk"
+            android:gravity="start" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="-30dp"
+            android:text="Alphabets"
+            android:textSize="25sp"
+            android:textStyle="italic|bold" />
+
+    </LinearLayout>
+
     <GridView
+        android:id="@+id/gridview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/gridview"
-        android:numColumns="2"/>
+        android:layout_marginTop="5dp"
+        android:background="@android:color/white"
+        android:numColumns="2" />
 
 </LinearLayout>

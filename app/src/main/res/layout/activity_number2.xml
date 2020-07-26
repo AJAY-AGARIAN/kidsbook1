@@ -3,13 +3,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:backgroundTint="#FAF8F8"
     android:orientation="vertical"
     tools:context=".number2">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ccc"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/back_button_number"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/backk"
+            android:gravity="start" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="-30dp"
+            android:text="Numbers"
+            android:textSize="25sp"
+            android:textStyle="italic|bold" />
+
+    </LinearLayout>
+
     <GridView
         android:id="@+id/gridview"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:numColumns="3" />
+        android:background="@android:color/white"
+        android:numColumns="2" />
 
 </LinearLayout>
