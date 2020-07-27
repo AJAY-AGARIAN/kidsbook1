@@ -49,7 +49,7 @@ public class wild2 extends AppCompatActivity {
             }
         });
 
-        btnwild = findViewById(R.id.back_button_wild);
+        btnwild = findViewById(R.id.button_wild);
         btnwild.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,6 +59,7 @@ public class wild2 extends AppCompatActivity {
 
 
         grill = findViewById(R.id.gridview6);
+
         mainAdapter adapter = new mainAdapter(wild2.this, numberword, numberimage);
         grill.setAdapter(adapter);
 
