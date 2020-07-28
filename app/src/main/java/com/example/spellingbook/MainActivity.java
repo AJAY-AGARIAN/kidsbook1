@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         topanim= AnimationUtils.loadAnimation(this,R.anim.top_animation);
         bottomanim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
 
-        image=findViewById(R.id.imageView);
+        image = findViewById(R.id.imageView);
         text = findViewById(R.id.textview);
 
         image.setAnimation(topanim);
