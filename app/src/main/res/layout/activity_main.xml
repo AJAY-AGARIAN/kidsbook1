@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/textview"
-        android:layout_width="412dp"
-        android:layout_height="160dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/great_vibes"
         android:text="Kids Picture Book"
         android:textAlignment="center"
@@ -30,7 +30,7 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="404dp"
+        android:layout_width="match_parent"
         android:layout_height="440dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
