@@ -36,7 +36,7 @@ public class secondscreen extends AppCompatActivity {
             R.drawable.bird,
             R.drawable.insects,
             R.drawable.flower,
-            R.drawable.color,
+            R.drawable.colorr,
             R.drawable.mathss,
             R.drawable.shapes,
             R.drawable.vechicle};
