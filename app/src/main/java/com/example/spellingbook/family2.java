@@ -19,8 +19,8 @@ import static com.example.spellingbook.eachAlphabet3.t1;
 public class family2 extends AppCompatActivity {
     GridView grill;
     Button btnfamily;
-    String[] numberword = {"Father", "Mother", "Brother", "Sister", "Grand Mother", "Grand Father", "Uncle", "Auntie", "Cousin"};
-    int[] numberimage={
+    String[] numberword = {"Father", "Mother", "Brother", "Sister", "Grand Mother", "Grand Father", "Uncle", "Aunt", "Cousin"};
+    int[] numberimage = {
             R.drawable.father,
             R.drawable.mom,
             R.drawable.bro,
