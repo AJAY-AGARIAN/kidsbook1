@@ -26,7 +26,7 @@ public class secondscreen extends AppCompatActivity {
             "Flowers","Colors","Maths Symbols","Shapes","Transport"};
     int[] numberimage={
             R.drawable.abc,
-            R.drawable.numberr,
+            R.drawable.numb,
             R.drawable.family,
             R.drawable.body,
             R.drawable.fruits,
@@ -46,7 +46,9 @@ public class secondscreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_secondscreen);
+
         t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
