@@ -33,7 +33,7 @@ public class eachAlphabet3 extends AppCompatActivity {
             R.drawable.icecream,
             R.drawable.jeep,
             R.drawable.kite,
-            R.drawable.lion,
+            R.drawable.wild,
             R.drawable.mango,
             R.drawable.nest,
             R.drawable.orange,

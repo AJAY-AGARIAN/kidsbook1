@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -83,8 +82,10 @@ public class alphabets2screen extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 t1.speak(eachWord2[position], TextToSpeech.QUEUE_FLUSH, null);
-                Toast.makeText(getApplicationContext(), "You Clicked" + eachWord[+position],
-                        Toast.LENGTH_SHORT).show();
+
+//
+//                Toast.makeText(getApplicationContext(), "You Clicked" + eachWord[+position],
+//                        Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(alphabets2screen.this, eachAlphabet3.class);
                 intent.putExtra("position", position + "");
                 startActivity(intent);

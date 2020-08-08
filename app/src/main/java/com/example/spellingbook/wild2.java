@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,7 +20,7 @@ public class wild2 extends AppCompatActivity {
     Button btnwild;
     String[] numberword = {"Lion", "Tiger", "Elephant", "Giraffe", "Monkey", "Deer", "Snake", "Panda", "Zebra", "Bear", "Rabbit", "Yak"};
     int[] numberimage = {
-            R.drawable.lion,
+            R.drawable.wild,
             R.drawable.tiger,
             R.drawable.eleph,
             R.drawable.gira,
@@ -67,8 +66,10 @@ public class wild2 extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 t1.speak(numberword[position], TextToSpeech.QUEUE_FLUSH, null);
-                Toast.makeText(getApplicationContext(), "You Clicked" + numberword[+position],
-                        Toast.LENGTH_SHORT).show();
+
+
+//                Toast.makeText(getApplicationContext(), "You Clicked" + numberword[+position],
+//                        Toast.LENGTH_SHORT).show();
             }
         });
 

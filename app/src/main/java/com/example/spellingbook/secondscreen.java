@@ -31,7 +31,7 @@ public class secondscreen extends AppCompatActivity {
             R.drawable.body,
             R.drawable.fruits,
             R.drawable.veg,
-            R.drawable.lion,
+            R.drawable.wild,
             R.drawable.cow,
             R.drawable.bird,
             R.drawable.insects,
@@ -48,6 +48,7 @@ public class secondscreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_secondscreen);
+
 
         t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
@@ -66,17 +67,19 @@ public class secondscreen extends AppCompatActivity {
         grill.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(),"You Clicked"+numberword[+position],
-                        Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(),"You Clicked"+numberword[+position],
+//                        Toast.LENGTH_SHORT).show();
+
+
                 t1.speak(numberword[position], TextToSpeech.QUEUE_FLUSH, null);
-                if (position==0){
-                    startActivity(new Intent(secondscreen.this,alphabets2screen.class));
+                if (position == 0) {
+                    startActivity(new Intent(secondscreen.this, alphabets2screen.class));
 
                 }
-                if (position==1){
-                    startActivity(new Intent(secondscreen.this,number2.class));
+                if (position == 1) {
+                    startActivity(new Intent(secondscreen.this, number2.class));
                 }
-                if (position==2){
+                if (position == 2) {
                     startActivity(new Intent(secondscreen.this,family2.class));
                 }
                 if (position==3){

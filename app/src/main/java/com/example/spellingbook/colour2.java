@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -65,8 +64,8 @@ public class colour2 extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 t1.speak(numberword[position], TextToSpeech.QUEUE_FLUSH, null);
-                Toast.makeText(getApplicationContext(), "You Clicked" + numberword[+position],
-                        Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), "You Clicked" + numberword[+position],
+//                        Toast.LENGTH_SHORT).show();
             }
         });
 
