@@ -18,13 +18,13 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.Locale;
 
-import static com.example.spellingbook.eachAlphabet3.t1;
+
 
 public class secondscreen extends AppCompatActivity {
     GridView grill;
-    String[] numberword={"Alphabets","Numbers","Family","Body Parts","Fruits","Vegetables","Wild Animals","Domestic Animals","Birds","Insects",
-            "Flowers","Colors","Maths Symbols","Shapes","Transport"};
-    int[] numberimage={
+    String[] numberword = {"Alphabets", "Numbers", "Family", "Body Parts", "Fruits", "Vegetables", "Wild Animals", "Domestic Animals", "Birds", "Insects",
+            "Flowers", "Colors", "Maths Symbols", "Shapes", "Transport"};
+    int[] numberimage = {
             R.drawable.abc,
             R.drawable.numb,
             R.drawable.family,
@@ -40,7 +40,7 @@ public class secondscreen extends AppCompatActivity {
             R.drawable.mathss,
             R.drawable.shapes,
             R.drawable.vechicle};
-
+    private TextToSpeech t1;
 
 
     @Override

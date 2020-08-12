@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#ccc"
+        android:background="@drawable/wall"
         android:orientation="horizontal">
 
         <Button
@@ -30,6 +30,7 @@
             android:gravity="center"
             android:paddingStart="-30dp"
             android:text="Shapes"
+            android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="italic|bold" />
 
@@ -37,10 +38,9 @@
 
     <GridView
         android:id="@+id/gridview12"
-        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/white"
+        android:background="@drawable/wall"
         android:numColumns="2" />
 
 </LinearLayout>

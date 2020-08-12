@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-import static com.example.spellingbook.eachAlphabet3.t1;
 
 public class family2 extends AppCompatActivity {
     GridView grill;
@@ -29,9 +28,7 @@ public class family2 extends AppCompatActivity {
             R.drawable.profile,
             R.drawable.person,
             R.drawable.cousin};
-
-
-
+    private TextToSpeech t1;
 
 
     @Override

@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-import static com.example.spellingbook.eachAlphabet3.t1;
 
 public class shapes2 extends AppCompatActivity {
     GridView grill;
@@ -33,6 +32,7 @@ public class shapes2 extends AppCompatActivity {
             R.drawable.pyramid,
             R.drawable.sphere,
             R.drawable.star};
+    private TextToSpeech t1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

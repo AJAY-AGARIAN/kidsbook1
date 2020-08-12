@@ -15,8 +15,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-import static com.example.spellingbook.eachAlphabet3.t1;
-
 public class body2 extends AppCompatActivity {
     GridView grill;
     Button btnbody;
@@ -41,6 +39,7 @@ public class body2 extends AppCompatActivity {
             R.drawable.knee,
             R.drawable.foot
     };
+    private TextToSpeech t1;
 
 
     @Override

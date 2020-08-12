@@ -13,8 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-import static com.example.spellingbook.eachAlphabet3.t1;
-
 public class domestic2 extends AppCompatActivity {
     GridView grill;
     Button btndom;
@@ -33,6 +31,7 @@ public class domestic2 extends AppCompatActivity {
             R.drawable.sheep,
             R.drawable.buffalo,
     };
+    private TextToSpeech t1;
 
 
     @Override

@@ -13,16 +13,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-import static com.example.spellingbook.eachAlphabet3.t1;
+
 
 public class alphabets2screen extends AppCompatActivity {
     GridView grill;
     Button btnalpah2;
-    public static String[] eachWord = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
-            "", "", "", "", "", ""};
-    public static String[] eachWord2={"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T",
-            "U","V","W","X","Y","Z"};
-   public static int[] wordImage={
+    public static String[] eachWord = {"Apple", "Ball", "Cat", "Drum", "Egg", "Fish", " Gloves", "House", "Iglu", "Jug", "Key", "Lock", "Mug", "Nest", "Orange",
+            "Pumpkin", "Queen", "Robot", "Snake", "Tree",
+            "Umbrella", "Volcano", "Watch", "Xylophone", "Yoyo", "Zip"};
+    public static String[] eachWord2 = {"a for Apple", "b for Boll", "c for Cat", "d for Drum", "e for Egg", " f for Fish", "g for  gloves", "h for House",
+            "i for iglu", "j for Jug", "k for Key", "l for Lock", "m for Mug", "n for Nest", "o for Orange", "p for Pumpkin", "q for Queen",
+            "r for robot", "s for Snake", "t for Tree",
+            "u for Umbrella", "v for volcano", "w for Watch", "x for Xylophone", "y for YoYo", "z for Zip"};
+    public static int[] wordImage = {
             R.drawable.a,
             R.drawable.b,
             R.drawable.c,
@@ -49,9 +52,7 @@ public class alphabets2screen extends AppCompatActivity {
             R.drawable.x,
             R.drawable.y,
             R.drawable.z};
-
-
-
+    private TextToSpeech t1;
 
 
     @Override
@@ -74,7 +75,7 @@ public class alphabets2screen extends AppCompatActivity {
             }
         });
         grill = findViewById(R.id.gridview);
-        mainAdapter adapter = new mainAdapter(alphabets2screen.this, eachWord, wordImage);
+        alphaAdapter adapter = new alphaAdapter(alphabets2screen.this, eachWord, wordImage);
         grill.setAdapter(adapter);
 
 
@@ -86,9 +87,11 @@ public class alphabets2screen extends AppCompatActivity {
 //
 //                Toast.makeText(getApplicationContext(), "You Clicked" + eachWord[+position],
 //                        Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(alphabets2screen.this, eachAlphabet3.class);
-                intent.putExtra("position", position + "");
-                startActivity(intent);
+
+
+//                Intent intent = new Intent(alphabets2screen.this, eachAlphabet3.class);
+//                intent.putExtra("position", position + "");
+//                startActivity(intent);
             }
         });
 

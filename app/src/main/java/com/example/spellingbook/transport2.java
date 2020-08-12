@@ -13,8 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-import static com.example.spellingbook.eachAlphabet3.t1;
-
 public class transport2 extends AppCompatActivity {
     GridView grill;
     Button btntran;
@@ -31,6 +29,7 @@ public class transport2 extends AppCompatActivity {
             R.drawable.jeep,
             R.drawable.boat,
             R.drawable.truck};
+    private TextToSpeech t1;
 
 
     @Override

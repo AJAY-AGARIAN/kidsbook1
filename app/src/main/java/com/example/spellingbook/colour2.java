@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-import static com.example.spellingbook.eachAlphabet3.t1;
 
 public class colour2 extends AppCompatActivity {
     GridView grill;
@@ -33,6 +32,7 @@ public class colour2 extends AppCompatActivity {
             R.color.white,
             R.color.gold,
             R.color.silver};
+    private TextToSpeech t1;
 
 
     @Override

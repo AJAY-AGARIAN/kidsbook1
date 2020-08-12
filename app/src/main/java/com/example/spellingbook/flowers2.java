@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-import static com.example.spellingbook.eachAlphabet3.t1;
+
 
 public class flowers2 extends AppCompatActivity {
     GridView grill;
@@ -33,6 +33,7 @@ public class flowers2 extends AppCompatActivity {
             R.drawable.cale,
             R.drawable.orch,
     };
+    private TextToSpeech t1;
 
 
     @Override

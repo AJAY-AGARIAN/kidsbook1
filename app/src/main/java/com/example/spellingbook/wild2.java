@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-import static com.example.spellingbook.eachAlphabet3.t1;
+
 
 public class wild2 extends AppCompatActivity {
     GridView grill;
@@ -25,13 +25,14 @@ public class wild2 extends AppCompatActivity {
             R.drawable.eleph,
             R.drawable.gira,
             R.drawable.monkey,
-            R.drawable.de,
+            R.drawable.deer,
             R.drawable.snake,
             R.drawable.panda,
             R.drawable.ze,
             R.drawable.bear,
             R.drawable.rabbit,
             R.drawable.yark};
+    private TextToSpeech t1;
 
 
     @Override
