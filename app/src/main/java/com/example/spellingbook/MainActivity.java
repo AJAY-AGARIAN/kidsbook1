@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private static int SPLASH_SCreen = 1000;
+    private static int SPLASH_SCreen = 4000;
     Animation topanim, bottomanim;
     ImageView image;
     TextView text;
@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
         bottomanim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
 
         image = findViewById(R.id.imageView);
-        text = findViewById(R.id.textview);
+//        text = findViewById(R.id.textview);
 
         image.setAnimation(topanim);
-        text.setAnimation(bottomanim);
+//        text.setAnimation(bottomanim);
 
 
         new Handler().postDelayed(new Runnable() {
