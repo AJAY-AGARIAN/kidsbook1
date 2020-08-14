@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/wallpaper"
     android:orientation="vertical"
     tools:context=".about">
 
@@ -16,6 +16,7 @@
         android:fontFamily="serif"
         android:text="About App"
         android:textColor="#3E3A3A"
+        android:textStyle="bold"
         android:textSize="25dp" />
 
     <ImageView
@@ -23,7 +24,7 @@
         android:layout_width="125dp"
         android:layout_height="92dp"
         android:layout_gravity="center"
-        app:srcCompat="@drawable/yellowlogo" />
+        app:srcCompat="@drawable/aaaaa" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -44,6 +45,7 @@
         android:layout_margin="10dp"
         android:fontFamily="serif"
         android:text="Contact"
+        android:textStyle="bold"
         android:textColor="#151414"
         android:textSize="25dp" />
 
@@ -56,7 +58,7 @@
         android:text="Email:abinshibuthomas67@gamil.com
                                           Linkedin: https://www.linkedin.com/in/abin-shibu-thomas-5a7a2119a/
 "
-        android:textColor="#C61414"
+        android:textColor="#0E0E0E"
         android:textSize="25dp" />
 
     <TextView
