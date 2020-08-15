@@ -22,7 +22,7 @@
             android:paddingTop="30dp"
             android:text="1"
             android:textAlignment="center"
-            android:textColor="@android:color/holo_red_dark"
+            android:textColor="@color/green"
             android:textSize="80sp"
             android:textStyle="bold|italic" />
 
