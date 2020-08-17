@@ -17,5 +17,7 @@
     <color name="white">#FFFFFF</color>
     <color name="silver">#C0C0C0</color>
     <color name="gold">#FFD700</color>
+    <color name="little">#F65058</color>
+    <color name="blu">#00B0FF</color>
 
 </resources>

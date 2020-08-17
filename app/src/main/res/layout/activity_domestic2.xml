@@ -31,7 +31,7 @@
             android:paddingStart="-30dp"
             android:text="Domestic Animals"
             android:textSize="25sp"
-            android:textColor="@color/black"
+            android:textColor="@color/little"
             android:textStyle="italic|bold" />
 
     </LinearLayout>

@@ -27,7 +27,6 @@
             android:name=".subMainAdapter"
             tools:ignore="Instantiatable" />
         <activity android:name=".number2" />
-        <activity android:name=".eachAlphabet3" />
         <activity android:name=".family2" />
         <activity android:name=".alphabets2screen" />
         <activity android:name=".secondscreen" />

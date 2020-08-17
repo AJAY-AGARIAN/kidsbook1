@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:paddingStart="-30dp"
-            android:textColor="@color/black"
+            android:textColor="@color/little"
             android:text="Vegetables"
             android:textSize="25sp"
             android:textStyle="italic|bold" />

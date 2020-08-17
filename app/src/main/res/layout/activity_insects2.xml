@@ -30,7 +30,7 @@
             android:gravity="center"
             android:paddingStart="-30dp"
             android:text="Insects"
-            android:textColor="@color/ic_launcher_background"
+            android:textColor="@color/little"
             android:textSize="25sp"
             android:textStyle="italic|bold" />
 

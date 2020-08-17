@@ -31,7 +31,7 @@
             android:id="@+id/text_wild"
             android:paddingStart="-30dp"
             android:text="Wild Animals"
-            android:textColor="@color/black"
+            android:textColor="@color/little"
             android:textSize="25sp"
             android:textStyle="italic|bold" />
 
