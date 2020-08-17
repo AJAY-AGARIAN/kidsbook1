@@ -174,19 +174,19 @@ public class about extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
-        ListView listViewDemo = findViewById(R.id.listattr);
+        //ListView listViewDemo = findViewById(R.id.listattr);
 
         final ArrayAdapter<String> adapterDemo = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, st_attr);
-        listViewDemo.setAdapter(adapterDemo);
+        //listViewDemo.setAdapter(adapterDemo);
 
-        listViewDemo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /*listViewDemo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String value = adapterDemo.getItem(position);
                 Toast.makeText(getApplicationContext(), value, Toast.LENGTH_SHORT).show();
             }
 
-        });
+        });*/
 
     }
 }

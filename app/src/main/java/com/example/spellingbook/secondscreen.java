@@ -1,14 +1,21 @@
 package com.example.spellingbook;
 
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -42,14 +49,20 @@ public class secondscreen extends AppCompatActivity {
             R.drawable.vechicle};
     private TextToSpeech t1;
 
-
+    Dialog popupDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.BLUE);
+        }
 
         setContentView(R.layout.activity_secondscreen);
 
-
+        //POPUP WINDOW
+        popupDialog=new Dialog(this);
         t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
@@ -124,48 +137,48 @@ public class secondscreen extends AppCompatActivity {
         });
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
+
             @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(secondscreen.this);
-                LayoutInflater layoutInflaterAndroid = LayoutInflater.from(secondscreen.this);
-                View view2 = layoutInflaterAndroid.inflate(R.layout.alert_box, null);
-                builder.setView(view2);
-                builder.setCancelable(false);
-                final AlertDialog alertDialog = builder.create();
-                alertDialog.show();
-                ImageButton rate = view2.findViewById(R.id.imageButton);
-                ImageButton share = view2.findViewById(R.id.imageButton2);
-                ImageButton aboutUs = view2.findViewById(R.id.imageButton4);
-                ImageButton exit = view2.findViewById(R.id.imageButton5);
-
-
-                exit.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        alertDialog.cancel();
-                    }
-                });
-                rate.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(secondscreen.this, "Rate us ...", Toast.LENGTH_SHORT).show();
-                    }
-                });
-                aboutUs.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        startActivity(new Intent(secondscreen.this, about.class));
-                    }
-                });
-                share.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(secondscreen.this, "Rate us ...", Toast.LENGTH_SHORT).show();
-                    }
-                });
-
+            public void onClick(View view)
+            {
+                showPopup();
             }
+
         });
 
     }
+    //POPUP
+    private void showPopup() {
+        popupDialog.setContentView(R.layout.alert_box);
+
+        ImageButton rate = popupDialog.findViewById(R.id.imageButton);
+        ImageButton share = popupDialog.findViewById(R.id.imageButton2);
+        ImageButton aboutUs = popupDialog.findViewById(R.id.imageButton4);
+
+        rate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(secondscreen.this, "Rate us.", Toast.LENGTH_SHORT).show();
+            }
+        });
+        aboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(secondscreen.this, about.class));
+            }
+        });
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                String shareBody = "Hey! Download Kids Picture Book from Google play store.Visit https://play.google.com/store/apps/ to download app now.";
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(sharingIntent, "Share via"));
+            }
+        });
+        popupDialog.show();
+    }
 }
+
